@@ -57,7 +57,7 @@ Things you may want to cover:
 - has_many :groups_users
 - has_many :groups,throuh:groups_users
 - has_many :coments
-## groups_usersテーブル
+## groups_usersテmーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -65,8 +65,8 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -74,14 +74,14 @@ Things you may want to cover:
 ### Association
 - has_many :groups_users
 - has_many :users, through: groups_users
-- has_many :coments
+- has_many :comments
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|image|text|null: false|
+|text|text||
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :groups
-- belongs_to :users
+- belongs_to :group
+- belongs_to :user
