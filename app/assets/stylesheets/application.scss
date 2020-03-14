@@ -1,6 +1,10 @@
 @import "reset";
+@import "confing/colors";
 @import "modules/messages";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "./chat-side";
 @import "./chat-main";
+@import "modules/user";
+@import "modules/flash";
+@import "modules/group";
