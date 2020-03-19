@@ -67,6 +67,7 @@
         &__image{
           object-fit:contain;
           width:200px;
+          overflow: scroll;
         }
       }
     }
