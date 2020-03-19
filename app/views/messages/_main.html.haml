@@ -11,16 +11,7 @@
     .main-header__edit-btn Edit
    
   .messages
-    .messege
-      .message__upper-info
-        %p.message__upper-info__talker test_user
-        %p.message__upper-info__date 2019/7/16
-      %p.message__text こんにちわ
-      .message__upper-info
-        %p.message__upper-info__talker test_user
-        %p.message__upper-info__date 2019/7/16
-      %p.message__text こんばんは
-
+    = render @messages
 
   .form 
     = form_for [@group, @message] do |f|

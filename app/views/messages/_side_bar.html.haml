@@ -4,8 +4,9 @@
       %p.side-header__box-user-name
       ゆう    
       %ul.side-header__box__menu  
+      -#  = link_to new_group_path do
         %li.side-header-box__menu__new-group
-          = link_to new_group_path do
+         = link_to new_group_path do
             = icon('fas','edit')
         %li.side-header-box__menu__edit-user
           = link_to edit_user_path(current_user) do
@@ -19,3 +20,5 @@
         %p.group__group-name
           = group.name
         %p.group__latest-message
+        = group.show_last_message
+  
