@@ -2,14 +2,15 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group{"data-group_id": ""}
-        グループ名
+        uuuuuuuu
       %ul.main-header__left-box__member-list  
-        Member：            
+        member :           
         %li.main-header__left-box__member-list__member 
-        yuu
-      = link_to '/groups/2394/edit'
-    .main-header__edit-btn Edit
-   
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
+    .main-header__edit-btn 
+      %a.right-header__button
+        Edit
   .messages
     = render @messages
 
